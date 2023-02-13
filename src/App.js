@@ -9,20 +9,11 @@ import { CreateThread } from "./pages/CreateThread";
  * @type {React.FC}
  */
 function App() {
-  const [thread, setThread] = useState([]);
-  const [offset, setOffset] = useState(0);
-
-  const url = "https://2y6i6tqn41.execute-api.ap-northeast-1.amazonaws.com/";
-  useEffect(() => {
-    fetch(`${url}/threads?offset=${offset}`)
-      .then(res => res.json())
-      .then(res => setThread(res));
-  }, [])
   return (
     <div className = "App">
       <Header />
       <Routes>
-        <Route path="/" element={<Home thread={thread} />} />
+        <Route path="/" element={<Home/>} />
         <Route path="/create" element={<CreateThread/>}></Route>
       </Routes>
     </div>
