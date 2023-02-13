@@ -32,7 +32,51 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+#titleArea {
+  width: auto;
+  height: 100px;
+  background: #66D58B;
+}
+
+#title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 30px;
+  color: #FFFFFF;
+}
+
+#createThread {
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 24px;
+  line-height: 29px;
+  text-decoration-line: underline;
+  color: #FFFFFF;
+}
+
+#threadArea{
+  display: flex;
+  flex-flow: column;
+}
+#threadTitle{
+  font-size: 30px;
+  margin: 10px auto;
+}
+.thread{
+  width: 250px;
+  background-color: white;
+  border: solid;
+  padding: 10px;
+  align-items: center;
+  margin: 1px auto;
+  border-radius: 10px;
+}
+.thread:hover{
+  background-color: antiquewhite;
 }
