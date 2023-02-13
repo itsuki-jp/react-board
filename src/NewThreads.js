@@ -8,12 +8,12 @@ export function Threads() {
     useEffect(() => {
         fetch(`${url}/threads?offset=${offset}`)
             .then(res => res.json())
-            .then(res => setThread(res));
+            .then(res => setThread(res))
     }, []);
 
     return (
         thread.map((val) =>
-            <div id={val.id} class="thread" >{val.title}</div>
+            <div key={val.id} className="thread" >{val.title}</div>
         )
     );
 }

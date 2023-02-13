@@ -1,4 +1,4 @@
-import { Threads } from '../Threads.js';
+import { Threads } from '../NewThreads.js';
 export function Home(props) {
     return (
         <div id="threadArea">
