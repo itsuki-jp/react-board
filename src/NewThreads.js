@@ -13,7 +13,7 @@ export function Threads() {
 
     return (
         thread.map((val) =>
-            <div key={val.id} className="thread" >{val.title}</div>
+            <div id={ val.id} key={val.id} className="thread" >{val.title}</div>
         )
     );
 }
