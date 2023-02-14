@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 
 export function NewThread() {
     const url = "https://2y6i6tqn41.execute-api.ap-northeast-1.amazonaws.com/";
-    // ReactでDOMを直接取得しないほうが良い
     const [threadName, setThreadName] = useState("");
     function create() {
         const data = { title: threadName };

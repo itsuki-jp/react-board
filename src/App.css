@@ -37,6 +37,9 @@
     transform: rotate(360deg);
   }
 }
+body{
+  background-color: rgb(227, 224, 224);
+}
 
 #titleArea {
   width: auto;
@@ -81,5 +84,20 @@
   border-color: black;
 }
 .thread:hover{
+  background-color: antiquewhite;
+}
+.reply{
+  width: 250px;
+    text-decoration-line: none;
+    color: black;
+    background-color: white;
+    border: solid;
+    padding: 10px;
+    align-items: center;
+    margin: 1px auto;
+    border-radius: 10px;
+    border-color: black;
+}
+.reply:hover {
   background-color: antiquewhite;
 }
