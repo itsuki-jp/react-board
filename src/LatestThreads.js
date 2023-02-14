@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 
-export function Threads() {
+export function LatestThreads() {
     const [thread, setThread] = useState([]);
     const [offset, setOffset] = useState(0);
 
@@ -12,8 +13,8 @@ export function Threads() {
     }, []);
 
     return (
-        thread.map((val) =>
-            <div id={ val.id} key={val.id} className="thread" >{val.title}</div>
+        thread.map((val,idx) =>
+            <Link id={ val.id} key={val.id} className="thread" to={`/thread/${val.id}`} >{val.title}</Link>
         )
     );
 }

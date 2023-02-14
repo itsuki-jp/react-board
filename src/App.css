@@ -70,12 +70,15 @@
 }
 .thread{
   width: 250px;
+  text-decoration-line: none;
+  color: black;
   background-color: white;
   border: solid;
   padding: 10px;
   align-items: center;
   margin: 1px auto;
   border-radius: 10px;
+  border-color: black;
 }
 .thread:hover{
   background-color: antiquewhite;

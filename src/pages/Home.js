@@ -1,9 +1,9 @@
-import { Threads } from '../NewThreads.js';
-export function Home(props) {
+import { LatestThreads } from '../LatestThreads.js';
+export function Home() {
     return (
         <div id="threadArea">
             <div id="threadTitle">新着スレッド</div>
-            <Threads thread={props.thread} />
+            <LatestThreads />
         </div>
 
     );
