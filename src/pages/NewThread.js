@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 export function NewThread() {
     const url = "https://2y6i6tqn41.execute-api.ap-northeast-1.amazonaws.com/";
     const [threadName, setThreadName] = useState("");
+    const navigate = useNavigate();
     function create() {
         const data = { title: threadName };
         fetch(`${url}/threads`, {
@@ -16,8 +17,8 @@ export function NewThread() {
             .then((response) => response.json())
             .then((data) => {
                 setThreadName("");
-                // Navigate で Rootに戻す
-                // React Router でページ遷移できる, 調べてみる
+                // navigate で Rootに戻す
+                navigate('/');
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -29,7 +30,6 @@ export function NewThread() {
         <div id="createThreadArea">
             <p>スレッド新規作成</p>
             <input type="text" value={threadName} onChange={(e) => setThreadName(e.target.value)} />
-            <Link to="/">Topに戻る</Link>
             <button onClick={create}>作成</button>
         </div>
     );

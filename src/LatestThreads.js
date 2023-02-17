@@ -13,8 +13,8 @@ export function LatestThreads() {
     }, []);
 
     return (
-        thread.map((val,idx) =>
-            <Link id={ val.id} key={val.id} className="thread" to={`/thread/${val.id}`} >{val.title}</Link>
+        thread.map((val, idx) =>
+            <Link id={val.id} key={val.id} className="thread" to={`/thread/${val.id}`} state={{ title: val.title }}>{val.title}</Link>
         )
     );
 }

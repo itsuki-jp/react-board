@@ -101,3 +101,11 @@ body{
 .reply:hover {
   background-color: antiquewhite;
 }
+
+button{
+  margin: 50px;
+  border: solid 1px;
+}
+button:hover{
+  background-color: rgb(206, 206, 206);
+}
